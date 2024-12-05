@@ -28,7 +28,7 @@ body {
 }
 
 .main-container{
-  max-width: 90vw;
+  max-width: 85vw;
 }
 
 
@@ -87,7 +87,8 @@ body {
 
 
 .heading{
-  line-height: 4rem;
+  /* line-height: 4rem; */
+  font-size: 3.5rem;
 }
 
 .sub-heading{
