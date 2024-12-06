@@ -15,8 +15,8 @@ const Services = () => {
 
       <div className=" main-container text-center font-roboto w-[50vw] mx-auto z-20">
         <h1 className='text-secondaryColor text-5xl font-[500] my-5'>What We Offer?</h1>
-        <p className='font-[500] opacity-100'>
-        The Softiam -- Integrated design and content solutions, we specialize in creating stunning, user-friendly websites that elevate your online presence. Let us transform your digital landscape and help you reach your online goals.
+        <p className='text-lg opacity-100 '>
+        The Softiam -- provides you integrated design and content solutions, we specialize in creating stunning, user-friendly websites that elevate your online presence. Let us transform your digital landscape and help you reach your online goals.
         </p>
       </div>
 

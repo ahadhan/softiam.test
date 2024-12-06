@@ -1,8 +1,8 @@
 import React from 'react'
 import { FaLocationArrow } from "react-icons/fa";
 import Image from 'next/image';
-import HeroImg from "../../../assets/images/hero-img.jpg"
-import Idea from "../../../assets/images/idea.png"
+import HeroImg from "../../assets/images/hero-img.jpg"
+import Idea from "../../assets/images/idea.png"
 import {  } from 'react-icons/fa';
 
 const HeroSection = () => {
@@ -10,6 +10,8 @@ const HeroSection = () => {
     // const socialLinks = [
     //     {"icon" : }
     // ]
+
+    
     return (
         <div className='mt-16  main-container mx-auto '>
             <div className='flex '>
