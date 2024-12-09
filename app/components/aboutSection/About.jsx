@@ -30,18 +30,15 @@ const About = () => {
   alt='line'
   className='absolute top-20 -left-20'
   >
-
   </Image>
 </div>
       {/* Left Side */}
       <div className="left-side flex basis-1/2 flex-col z-10 mr-3" >
         <p className='text-secondaryColor text-3xl font-[400] my-5'> Featured case study</p>
-        <h1 className='text-5xl  font-semibold font-platfair'>Empowering <span className='text-secondaryColor font-playfair italic'> Modern Businesses </span> With Cutting-Edge Software Solutions</h1>
+        <h1 className='text-5xl  font-semibold font-playfair'>Empowering <span className='text-secondaryColor font-playfair italic'> Modern Businesses </span> With Cutting-Edge Software Solutions</h1>
 
         <p className='text-lg  my-4 font-roboto '>
           At softiam, we provide innovative software solutions designed to help businesses thrive in today’s digital landscape. Whether it's mobile app development, web applications, or AI-powered systems, we deliver high-quality solutions that meet our clients' unique needs.
-
-
         </p>
 
       <div className="img-container  ">

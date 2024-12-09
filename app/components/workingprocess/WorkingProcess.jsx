@@ -1,7 +1,10 @@
 'use client';
 
 import React, { useState } from 'react';
+import Image from 'next/image';
 import { motion } from 'framer-motion';
+import Lines from "../../assets/images/string.webp"
+import PaperPlane from "../../assets/images/paper-plane.webp"
 import { FaRegPaperPlane, FaCode, FaDatabase, FaUserCog, FaCheck } from 'react-icons/fa'; // Add icons for the steps
 import '../../globals.css';
 
@@ -46,21 +49,42 @@ const WorkProcess = () => {
   };
 
   return (
-    <section id="work-process" className="py-10 bg-gradient-to-t from-blue-800 via-blue-600 to-blue-500 text-white">
+    <section id="work-process" className="py-20 bg-gradient-to-t from-blue-800 via-blue-600 to-blue-500 text-white overflow-hidden">
+      <div className='main-container mx-auto'>
+      <div className="line relative">
+        <Image
+          src={Lines}
+          alt='line'
+          // width={800}
+          // height={500}
+          className='absolute -top-36 left-10 opacity-40 z-0'
+        >
+        </Image>
+
+        <Image
+          src={PaperPlane}
+          alt='line'
+          // width={800}
+          // height={500}
+          className='absolute -top-20 -left-20 z-0 opacity-90'
+        >
+        </Image>
+      </div>
+
       <div className="container mx-auto px-6">
-        <div className='my-8 space-y-5'>
-        <p className="text-3xl font-[400] font-roboto">
-          Our Working Process
-        </p>
-        <h1 className='text-5xl  font-semibold font-platfair'>Our Approach</h1>
+        <div className='my-8 mb-16 space-y-5 z-30'>
+          <p className="text-3xl font-[400] font-roboto">
+            Our Working Process
+          </p>
+          <h1 className='text-5xl z-10 font-semibold font-platfair'>Our Approach</h1>
         </div>
 
         {/* Steps Container */}
-        <div className="flex flex-wrap justify-between gap-6 ">
+        <div className="flex flex-wrap justify-center gap-6  ">
           {steps.map((step, index) => (
             <motion.div
               key={step.id}
-              className="relative w-full md:w-[280px] h-[100px] bg-white text-blue-800 rounded-lg p-6 flex flex-col items-center justify-center cursor-pointer mb-7 border-2 border-blue-800"
+              className="relative w-full  md:w-[280px] h-[100px] bg-white text-blue-800 rounded-lg p-6 flex flex-col items-center justify-center cursor-pointer mb-8 border-2 border-blue-800"
               onClick={() => toggleSubheading(index)}
               onHoverStart={() => toggleSubheading(index)} // Optional: you can also use hover to trigger the effect
               onHoverEnd={() => setActiveIndex(null)} // Reset when hover ends
@@ -78,7 +102,7 @@ const WorkProcess = () => {
 
               {/* Subheading Rectangle (Slides out on click or hover) */}
               <motion.div
-                className="absolute left-0 right-0 top-24 mt-2 bg-gray-100 text-blue text-sm rounded-lg p-4 z-20"
+                className=  {`absolute left-0 right-0  ${index > 2 ? 'top-24' : '-top-24'} mt-2 bg-gray-100 shadow-lg text-blue-700 text-sm rounded-lg p-4 z-20`}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{
                   opacity: activeIndex === index ? 1 : 0,
@@ -91,6 +115,7 @@ const WorkProcess = () => {
             </motion.div>
           ))}
         </div>
+      </div>
       </div>
     </section>
   );
