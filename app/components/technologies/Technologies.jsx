@@ -53,7 +53,7 @@ const TechnologiesSection = () => {
 
   return (
     <section className="py-20 bg-gray-100 overflow-hidden">
-      <div className="main-container mx-auto px-6 relative">
+      <div className="main-container mx-auto  relative">
 
         <div className="line ">
           <Image

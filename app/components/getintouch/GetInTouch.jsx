@@ -1,7 +1,9 @@
 'use client'
 import React, { useState } from 'react';
+import Image from 'next/image';
 import { FaMapMarkerAlt } from 'react-icons/fa';
 import { useForm } from 'react-hook-form';
+import Map from "../../assets/images/map.webp"
 
 const GetInTouch = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
@@ -9,34 +11,32 @@ const GetInTouch = () => {
 
     const onSubmit = (data) => {
         setFormStatus("Thank you for contacting us! We'll get back to you soon.");
-        // Here you can handle form submission (send to an API, email, etc.)
+        // Handle form submission logic (send to an API, email, etc.)
     };
 
     return (
-        <div className="py-16 bg-gray-100">
+        <div className="py-16 bg-gray-200">
             <div className="main-container mx-auto">
-                <div className=" mb-12 w-1/2">
-                    <p className='text-secondaryColor text-3xl font-[400] my-5'> Get In Touch</p>
-                    <h1 className='text-5xl  font-semibold font-playfair'>Your Business To <span className='text-secondaryColor font-playfair italic'> Growth </span> Please Touch ?</h1>
-
-                    <p className='text-lg  my-4 font-roboto '>
-                        For your car we will do everything advice design in us repairs and maintenance. We are the some preferred.
+                <div className="mb-12 w-1/2">
+                    <p className="text-secondaryColor text-3xl font-[400] my-5">Get In Touch</p>
+                    <h1 className="text-5xl font-semibold font-playfair">Your Business To <span className="text-secondaryColor font-playfair italic">Growth</span> Please Touch?</h1>
+                    <p className="text-lg my-4 font-roboto">
+                        For your car, we will do everything from advice to design and repairs. We are one of the most preferred.
                     </p>
                 </div>
 
                 <div className="flex flex-col md:flex-row justify-between gap-12 bg-white p-10">
-                    {/* Left side (Contact Form) */}
-                    <div className="w-full md:w-1/2 bg-white rounded-xl  p-8">
-                        <div className="flex items-center gap-2 mb-6">
-                            <FaMapMarkerAlt className="text-4xl text-blue-600" />
-                            <h3 className="text-xl font-semibold text-gray-700">Our Location</h3>
+                    {/* Left side (Map Background with Text) */}
+                    <div className="relative w-full md:w-1/2 bg-cover bg-center rounded-xl" style={{ backgroundImage: `url(${Map.src})` }}>
+                        {/* Optional overlay for better readability */}
+                        <div className="absolute inset-0 bg-black opacity-50 rounded-xl"></div>
+                        <div className="relative z-10 flex flex-col items-center justify-center w-full h-full p-8 text-white">
+                            <h3 className="text-3xl font-semibold mb-4">Our Location</h3>
+                            <p className="text-lg mb-6">1234 Software Park, Tech City, Country</p>
+                            <button className="py-3 px-6 border-2 border-white text-white rounded-lg hover:bg-blue-500 hover:text-white duration-300">
+                                View on Map
+                            </button>
                         </div>
-                        <p className="text-lg text-gray-700 mb-4">
-                            1234 Software Park, Tech City, Country
-                        </p>
-                        <button className="py-3 px-6 border-2 border-blue-500 text-blue-500 rounded-lg hover:bg-blue-500 hover:text-white duration-300">
-                            View on Map
-                        </button>
                         {formStatus && (
                             <div className="mt-6 text-green-500 font-semibold text-center">
                                 {formStatus}
@@ -44,10 +44,9 @@ const GetInTouch = () => {
                         )}
                     </div>
 
-                    {/* Right side (Address/Map) */}
-                    <div className="flex flex-col md:flex-row justify-between gap-12 bg-gray-100 shadow-lg rounded-lg p-10">
-
-                        <form onSubmit={handleSubmit(onSubmit)}>
+                    {/* Right side (Contact Form) */}
+                    <div className="flex bg-gray-200 shadow-lg rounded-lg p-10 w-full md:w-1/2">
+                        <form onSubmit={handleSubmit(onSubmit)} className="w-full">
                             <div className="mb-4">
                                 <label htmlFor="name" className="text-lg text-gray-700 font-medium">Full Name</label>
                                 <input
@@ -85,8 +84,6 @@ const GetInTouch = () => {
                                 Send Message
                             </button>
                         </form>
-
-
                     </div>
                 </div>
             </div>

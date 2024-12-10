@@ -76,7 +76,7 @@ const PortfolioSection = () => {
 
         {/* Portfolio Cards */}
         <div className='flex justify-center items-center w-full'>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 justify-items-center">
+        <div className="flex flex-wrap justify-center gap-8 ">
           {filteredProjects.map((project) => (
             <div
               key={project.id}

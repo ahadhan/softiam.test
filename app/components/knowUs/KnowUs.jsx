@@ -52,7 +52,7 @@ const AboutUs = () => {
   return (
     <div className='py-20 bg-gray-200 pb-32'>
       <section className=" main-container mx-auto ">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto ">
           <div className='w-1/2'>
             <p className='text-secondaryColor text-3xl font-[400] my-5'> Discover Us</p>
             <h1 className='text-5xl  font-semibold font-platfair'>The Power Of  <span className='text-secondaryColor font-playfair italic'>Software </span> , The Simplicity Of <span className='text-secondaryColor font-playfair italic'>Solutions </span></h1>

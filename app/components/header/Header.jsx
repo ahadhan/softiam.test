@@ -22,7 +22,7 @@ export default function Header() {
 
                     {/* Menu Links */}
                     <div className="hidden md:flex space-x-12 font-montserrat ">
-                        <Link href="/about" className="text-black hover:text-blue-300 duration-300 font-[600]">
+                        <Link href="/" className="text-black hover:text-blue-300 duration-300 font-[600]">
                             Home
                         </Link>
                         <Link href="/about" className="text-black hover:text-blue-300 duration-300 font-[600]">

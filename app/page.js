@@ -9,6 +9,7 @@ import TechnologiesSection from "./components/technologies/Technologies.jsx";
 import KnowUs from "./components/knowUs/KnowUs.jsx"
 import OurProjects from "./components/projects/OurProjects.jsx"
 import GetInTouch from "./components/getintouch/GetInTouch.jsx";
+import Footer from "./components/footer/Footer.jsx"
 
 export default function Home() {
   return (
@@ -23,6 +24,7 @@ export default function Home() {
       <KnowUs/>
       <OurProjects/>
       <GetInTouch/>
+      <Footer/>
     </div>
   );
 }
