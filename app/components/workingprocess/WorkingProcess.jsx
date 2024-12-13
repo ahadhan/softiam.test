@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import Image from 'next/image';
-import { motion } from 'framer-motion';
+
 import Lines from "../../assets/images/string.webp"
 import PaperPlane from "../../assets/images/paper-plane.webp"
 import { FaRegPaperPlane, FaCode, FaDatabase, FaUserCog, FaCheck } from 'react-icons/fa'; // Add icons for the steps
@@ -82,7 +82,7 @@ const WorkProcess = () => {
         {/* Steps Container */}
         <div className="flex flex-wrap justify-center gap-6  ">
           {steps.map((step, index) => (
-            <motion.div
+            <div
               key={step.id}
               className="relative w-full  md:w-[280px] h-[100px] bg-white text-blue-800 rounded-lg p-6 flex flex-col items-center justify-center cursor-pointer mb-8 border-2 border-blue-800"
               onClick={() => toggleSubheading(index)}
@@ -101,7 +101,7 @@ const WorkProcess = () => {
               </div>
 
               {/* Subheading Rectangle (Slides out on click or hover) */}
-              <motion.div
+              <div
                 className=  {`absolute left-0 right-0  ${index > 2 ? 'top-24' : '-top-24'} mt-2 bg-gray-100 shadow-lg text-blue-700 text-sm rounded-lg p-4 z-20`}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{
@@ -111,8 +111,8 @@ const WorkProcess = () => {
                 transition={{ duration: 0.4, ease: 'easeInOut' }}
               >
                 {step.subheading}
-              </motion.div>
-            </motion.div>
+              </div>
+            </div>
           ))}
         </div>
       </div>
