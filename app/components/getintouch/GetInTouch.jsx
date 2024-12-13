@@ -15,9 +15,9 @@ const GetInTouch = () => {
     };
 
     return (
-        <div className="py-16 bg-gray-200">
+        <div className="py-16 ">
             <div className="main-container mx-auto">
-                <div className="mb-12 w-1/2">
+                <div className="mb-12 md:w-1/2 w-full">
                     <p className="text-secondaryColor text-3xl font-[400] my-5">Get In Touch</p>
                     <h1 className="text-5xl font-semibold font-playfair">Your Business To <span className="text-secondaryColor font-playfair italic">Growth</span> Please Touch?</h1>
                     <p className="text-lg my-4 font-roboto">

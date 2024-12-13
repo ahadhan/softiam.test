@@ -52,14 +52,14 @@ const TechnologiesSection = () => {
   ];
 
   return (
-    <section className="py-20 bg-gray-100 overflow-hidden">
+    <section className="py-10 overflow-hidden">
       <div className="main-container mx-auto  relative">
 
         <div className="line ">
           <Image
             src={CurvedLine}
             alt='line'
-            className='absolute -top-28 -left-20 z-0 opacity-50 '
+            className='absolute -top-20 -left-20 z-0 opacity-50 '
           >
           </Image>
 
@@ -70,15 +70,15 @@ const TechnologiesSection = () => {
           src={QuestionMark}
           width={100}
           height={100}
-          className='absolute -top-20 left-36 skew-x-12 '
+          className='absolute -top-10 -left-10 skew-x-12 '
           >
           </Image>
 
         </div>
-        <div className='flex justify-between z-10'>
+        <div className='flex justify-between z-10 items-center'>
           <div className='w-1/2'>
-            <p className='text-secondaryColor text-3xl font-[400] my-5'> Our Tools </p>
-            <h1 className='text-5xl  font-semibold font-platfair'>What <span className='text-secondaryColor font-playfair italic'> Technologies </span> We Use?</h1>
+            <p className='text-secondaryColor text-3xl font-[600] my-5'> Our Tools </p>
+            <h1 className='text-5xl  font-semibold font-merriweather'>What <span className='text-secondaryColor font-playfair italic'> Technologies </span> We Use?</h1>
             <p className='text-lg  my-4 font-roboto '>
               At softiam, We use the best and most reliable technologies to deliver top-notch solutions for our customers.
             </p>
@@ -88,8 +88,8 @@ const TechnologiesSection = () => {
             <Image
               src={ToolsImg}
               className=''
-              width={400}
-              height={400}
+              width={500}
+              height={500}
             ></Image>
           </div>
         </div>

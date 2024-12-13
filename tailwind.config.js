@@ -10,11 +10,18 @@ module.exports = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
-        secondaryColor: "#2868FC"
+        secondaryColor: "#246BFD"
       },
       fontFamily: {
         roboto: ['var(--font-roboto)', 'sans-serif'],
         playfair: ['var(--font-playfair)', 'serif'],
+        merriweather: ['Merriweather', 'serif'],
+      },
+      boxShadow: {
+        neon: "0 0 15px #00bfff, 0 0 30px #00bfff",
+      },
+      backgroundImage: {
+        "gradient-light": "linear-gradient(to bottom, #246BFD, #246aDC)",
       },
     },
   },

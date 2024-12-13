@@ -1,219 +1,209 @@
-"use client"
-import React, {useState} from 'react'
-import FaqImg from "../../assets/images/Faq-image.webp"
-import Image from 'next/image'
 
-const Faqs = () => {
 
-  const [open, setOpen] = useState(null); // Track which FAQ is open
+// "use client"
+// import { useState } from 'react';
+// import Image from 'next/image';
+// import FaqImg from "../../assets/images/Faq-image.webp"
+
+// const FaqSection = () => {
+//   const faqs = [
+//     {
+//       question: 'What is Next.js?',
+//       answer: 'Next.js is a React framework for production with features like server-side rendering and static site generation.',
+//     },
+//     {
+//       question: 'What is Tailwind CSS?',
+//       answer: 'Tailwind CSS is a utility-first CSS framework for rapidly building custom user interfaces.',
+//     },
+//     {
+//       question: 'How do I install Next.js?',
+//       answer: 'You can install Next.js by running `npx create-next-app@latest` in your terminal.',
+//     },
+//     {
+//       question: 'Can I use Tailwind with Next.js?',
+//       answer: 'Yes, Tailwind CSS works seamlessly with Next.js. You can set it up in just a few steps.',
+//     },
+//   ];
+
+//   const [activeIndex, setActiveIndex] = useState(null);
+
+//   const toggleFaq = (index) => {
+//     setActiveIndex(activeIndex === index ? null : index);
+//   };
+
+//   return (
+//     <section className="bg-gradient-to-b from-blue-800 via-blue-600 to-blue-500 text-white py-16 px-6">
+//       <div className='main-container mx-auto'>
+//       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center space-y-8 md:space-y-0 md:space-x-8">
+//         {/* FAQ Section */}
+//         <div className="md:w-1/2">
+//           <h2 className="text-4xl font-bold text-white mb-8">
+//             Frequently Asked Questions
+//           </h2>
+//           <div className="space-y-6">
+//             {faqs.map((faq, index) => (
+//               <div
+//                 key={index}
+//                 className="bg-white rounded-lg shadow-lg overflow-hidden transition-all"
+//               >
+//                 <button
+//                   onClick={() => toggleFaq(index)}
+//                   className={`w-full flex items-center justify-between px-6 py-3 text-left focus:outline-none transition-all duration-300 ${
+//                     activeIndex === index
+//                       ? 'bg-gradient-to-r from-secondaryColor to-blue-400 text-white'
+//                       : 'bg-gray-100 text-gray-800'
+//                   } hover:shadow-md`}
+//                 >
+//                   <span className="text-lg font-semibold">{faq.question}</span>
+//                   <span className="text-2xl font-bold bg-secondaryColor w-[40px] rounded-md text-center text-white pb-1 ">
+//                     {activeIndex === index ? '-' : '+'}
+//                   </span>
+//                 </button>
+//                 <div
+//                   className={`px-6 overflow-hidden bg-gray-50 text-gray-700 transition-max-height duration-500 ease-in-out ${
+//                     activeIndex === index
+//                       ? 'max-h-40 py-4'
+//                       : 'max-h-0 py-0'
+//                   }`}
+//                 >
+//                   {faq.answer}
+//                 </div>
+//               </div>
+//             ))}
+//           </div>
+//         </div>
+
+//         {/* Image Section */}
+//         <div className="md:w-1/2 flex justify-center">
+//           <Image
+//             src={FaqImg} // Replace with your image path
+//             alt="FAQ Illustration"
+//             className="w-full max-w-sm md:max-w-md drop-shadow-xl"
+//             width={400}
+//             height={400}
+// />
+//         </div>
+//       </div>
+//     </div>
+//     </section>
+//   );
+// };
+
+// export default FaqSection;
+
+
+
+
+
+
+
+"use client";
+import { useState } from 'react';
+import Image from 'next/image';
+import FaqImg from "../../assets/images/Faq-image.webp";
+
+const FaqSection = () => {
+  const faqs = [
+    {
+      question: 'What is Next.js?',
+      answer: 'Next.js is a React framework for production with features like server-side rendering and static site generation.',
+    },
+    {
+      question: 'What is Tailwind CSS?',
+      answer: 'Tailwind CSS is a utility-first CSS framework for rapidly building custom user interfaces.',
+    },
+    {
+      question: 'How do I install Next.js?',
+      answer: 'You can install Next.js by running `npx create-next-app@latest` in your terminal.',
+    },
+    {
+      question: 'Can I use Tailwind with Next.js?',
+      answer: 'Yes, Tailwind CSS works seamlessly with Next.js. You can set it up in just a few steps.',
+    },
+  ];
+
   const [activeIndex, setActiveIndex] = useState(null);
-  const [index, setindex] = useState(null)
 
-  const toggle = (index) => {
-    setindex(index)
-    setOpen(open === index ? null : index); // Toggle FAQ open/close
+  const toggleFaq = (index) => {
+    setActiveIndex(activeIndex === index ? null : index);
   };
 
   return (
-    <div>
-        <section className="py-20 bg-white">
-      <div className="max-w-screen-xl mx-auto px-6 main-container">
-        <div className="flex flex-col md:flex-row items-center justify-between">
-          {/* FAQ Content */}
-          <div className="md:w-1/2 space-y-8">
-          <p className='text-secondaryColor text-3xl font-[400] my-5'> Frequesntly Asked Questions</p>
-          <h1 className='text-5xl  font-semibold font-platfair'>Have You Any Question? </h1>
-            
+    <section
+      className="bg-gradient-to-b from-blue-800 via-blue-600 to-blue-500 text-white py-16 px-6"
+      data-aos="fade-up" // AOS animation for the section
+    >
+      <div className='main-container mx-auto'>
+        <div
+          className="max-w-7xl mx-auto flex flex-col md:flex-row items-center space-y-8 md:space-y-0 md:space-x-8"
+          data-aos="fade-up" // AOS animation for the inner container
+          data-aos-delay="200" // Delay for staggered effect
+        >
+          {/* FAQ Section */}
+          <div
+            className="md:w-1/2"
+            data-aos="fade-right" // AOS animation for FAQ container
+          >
+            <h2
+              className="text-4xl font-bold text-white mb-8"
+              data-aos="fade-down" // AOS animation for the heading
+              data-aos-delay="400"
+            >
+              Frequently Asked Questions
+            </h2>
             <div className="space-y-6">
-              {/* FAQ Item 1 */}
-              <div className='border-b-2 border-secondaryColor'>
-                <button
-                  onClick={() => toggle(1)}
-                  className="w-full text-left flex items-center justify-between text-xl font-medium text-gray-800"
+              {faqs.map((faq, index) => (
+                <div
+                  key={index}
+                  className="bg-white rounded-lg shadow-lg overflow-hidden transition-all"
+                  data-aos="fade-up" // AOS animation for each FAQ item
+                  data-aos-delay={`${600 + index * 200}`} // Staggered delay
                 >
-                  <span>What services do you offer?</span>
-                  <span 
-                  className="text-blue-600"
-                  initial={{ rotate: 0 }}
-                  animate={{ rotate: activeIndex === index ? 180 : 0 }}
-                  transition={{ duration: 0.3 }}
-                  >{open !== 1 ? '+' : '−'}</span>
-                </button>
-                {open === 1 && (
-                  <p className="text-gray-600 mt-2">
-                    We offer a wide range of software services including web development, app development, UI/UX design, and more.
-                  </p>
-                )}
-              </div>
-
-              {/* FAQ Item 2 */}
-              <div className='border-b-2 border-secondaryColor'>
-                <button
-                  onClick={() => toggle(2)}
-                  className="w-full text-left flex items-center justify-between text-xl font-medium text-gray-800 duration-300"
-                > 
-                  <span>How long does a project take?</span>
-                  <span className="text-blue-600">{open !== 2 ? '+' : '−'}</span>
-                </button>
-                {open === 2 && (
-                  <p className="text-gray-600 mt-2">
-                    Project timelines depend on the complexity and scope. Typically, projects range from a few weeks to several months.
-                  </p>
-                )}
-              </div>
-
-              {/* FAQ Item 3 */}
-              <div className='border-b-2 border-secondaryColor'>
-                <button
-                  onClick={() => toggle(3)}
-                  className="w-full text-left flex items-center justify-between text-xl font-medium text-gray-800"
-                >
-                  <span>Do you offer support after delivery?</span>
-                  <span className="text-blue-600">{open !== 3 ? '+' : '−'}</span>
-                </button>
-                {open === 3 && (
-                  <p className="text-gray-600 mt-2">
-                    Yes, we offer post-delivery support for maintenance, updates, and bug fixes as needed.
-                  </p>
-                )}
-              </div>
-
-              {/* FAQ Item 4 */}
-              <div className='border-b-2 border-secondaryColor'>
-                <button
-                  onClick={() => toggle(4)}
-                  className="w-full text-left flex items-center justify-between text-xl font-medium text-gray-800"
-                >
-                  <span>How can I contact you?</span>
-                  <span className="text-blue-600">{open !== 4 ? '+' : '−'}</span>
-                </button>
-                {open === 4 && (
-                  <p className="text-gray-600 mt-2">
-                    You can reach us via email, phone, or the contact form on our website. We're here to help!
-                  </p>
-                )}
-              </div>
+                  <button
+                    onClick={() => toggleFaq(index)}
+                    className={`w-full flex items-center justify-between px-6 py-3 text-left focus:outline-none transition-all duration-300 ${
+                      activeIndex === index
+                        ? 'bg-gradient-to-r from-secondaryColor to-blue-400 text-white'
+                        : 'bg-gray-100 text-gray-800'
+                    } hover:shadow-md`}
+                  >
+                    <span className="text-lg font-semibold">{faq.question}</span>
+                    <span className="text-2xl font-bold bg-secondaryColor w-[40px] rounded-md text-center text-white pb-1 ">
+                      {activeIndex === index ? '-' : '+'}
+                    </span>
+                  </button>
+                  <div
+                    className={`px-6 overflow-hidden bg-gray-50 text-gray-700 transition-max-height duration-500 ease-in-out ${
+                      activeIndex === index
+                        ? 'max-h-40 py-4'
+                        : 'max-h-0 py-0'
+                    }`}
+                  >
+                    {faq.answer}
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
 
           {/* Image Section */}
-          <div className="md:w-1/2 mt-10 md:mt-0">
+          <div
+            className="md:w-1/2 flex justify-center"
+            data-aos="zoom-in" // AOS animation for the image container
+            data-aos-delay="800"
+          >
             <Image
-              src={FaqImg}
-              className="w-full h-full object-cover "
-              alt="FAQ Image"
+              src={FaqImg} // Replace with your image path
+              alt="FAQ Illustration"
+              className="w-full max-w-sm md:max-w-md drop-shadow-xl"
+              width={400}
+              height={400}
             />
           </div>
         </div>
       </div>
     </section>
+  );
+};
 
-  </div>
-  )
-}
-
-export default Faqs;
-
-
-
-
-
-// 'use client';
-
-// import React, { useState } from 'react';
-// import { motion, AnimatePresence } from 'framer-motion';
-// import '../../app/globals.css';
-
-// const FAQSection = () => {
-//   const [activeIndex, setActiveIndex] = useState(null);
-
-//   const faqs = [
-//     {
-//       id: 1,
-//       question: 'What services do you offer?',
-//       answer: 'We offer a wide range of software services including web development, app development, UI/UX design, and more.',
-//     },
-//     {
-//       id: 2,
-//       question: 'How long does a project take?',
-//       answer: 'Project timelines depend on the complexity and scope. Typically, projects range from a few weeks to several months.',
-//     },
-//     {
-//       id: 3,
-//       question: 'Do you offer support after delivery?',
-//       answer: 'Yes, we offer post-delivery support for maintenance, updates, and bug fixes as needed.',
-//     },
-//     {
-//       id: 4,
-//       question: 'How can I contact you?',
-//       answer: 'You can reach us via email, phone, or the contact form on our website. We\'re here to help!',
-//     },
-//   ];
-
-//   const toggleAnswer = (index) => {
-//     setActiveIndex((prevIndex) => (prevIndex === index ? null : index));
-//   };
-
-//   return (
-//     <section id="faq" className="py-20 bg-gradient-to-t from-blue-800 via-blue-600 to-blue-500 text-white mb-2">
-//       <div className="container mx-auto px-6">
-//         {/* Dynamic Heading */}
-//         <motion.h2
-//           className="text-3xl md:text-4xl font-bold text-center mb-10 font-libre italic"
-//           initial={{ opacity: 0, y: -20 }}
-//           whileInView={{ opacity: 1, y: 0 }}
-//           transition={{ duration: 1 }}
-//         >
-//           Frequently Asked Questions
-//         </motion.h2>
-
-//         {/* FAQ List */}
-//         <div className="space-y-4">
-//           {faqs.map((faq, index) => (
-//             <motion.div
-//               key={faq.id}
-//               className="border-b border-gray-600 pb-4"
-//               initial={{ x: index % 2 === 0 ? -100 : 100, opacity: 0 }}
-//               whileInView={{ x: 0, opacity: 1 }}
-//               transition={{ duration: 0.6, ease: 'easeInOut' }}
-//               viewport={{ once: true }}
-//             >
-//               {/* Question */}
-//               <button
-//                 onClick={() => toggleAnswer(index)}
-//                 className="w-full text-left text-lg md:text-xl font-semibold flex justify-between items-center focus:outline-none"
-//               >
-//                 <span className="text-white">{faq.question}</span>
-//                 <motion.span
-//                   className="ml-2 text-2xl"
-//                   initial={{ rotate: 0 }}
-//                   animate={{ rotate: activeIndex === index ? 180 : 0 }}
-//                   transition={{ duration: 0.3 }}
-//                 >
-//                   {activeIndex === index ? '-' : '+'}
-//                 </motion.span>
-//               </button>
-
-//               {/* Answer */}
-//               <AnimatePresence>
-//                 {activeIndex === index && (
-//                   <motion.p
-//                     className="mt-2 text-gray-400"
-//                     initial={{ opacity: 0, height: 0 }}
-//                     animate={{ opacity: 1, height: 'auto' }}
-//                     exit={{ opacity: 0, height: 0 }}
-//                     transition={{ duration: 0.4, ease: 'easeInOut' }}
-//                   >
-//                     {faq.answer}
-//                   </motion.p>
-//                 )}
-//               </AnimatePresence>
-//             </motion.div>
-//           ))}
-//         </div>
-//       </div>
-//     </section>
-//   );
-// };
-
-// export default FAQSection;
+export default FaqSection;
