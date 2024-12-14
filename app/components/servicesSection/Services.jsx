@@ -112,7 +112,7 @@ import "../../globals.css";
 import Image from "next/image";
 import WebImg from "../../assets/images/developmen (1).webp";
 import AiImg from "../../assets/images/Ai (1).webp";
-import AppImg from "../../assets/images/app (1).Webp";
+import AppImg from "../../assets/images/app (1).webp";
 import SerImg from "../../assets/images/services.webp"
 
 const Services = () => {
