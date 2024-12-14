@@ -167,10 +167,10 @@ const FaqSection = () => {
                         : 'bg-gray-100 text-gray-800'
                     } hover:shadow-md`}
                   >
-                    <span className="text-lg font-semibold">{faq.question}</span>
+                    <span className="text-lg font-semibold text-black">{faq.question}</span>
                     <span className="text-2xl font-bold bg-secondaryColor w-[40px] rounded-md text-center text-white pb-1 ">
                       {activeIndex === index ? '-' : '+'}
-                    </span>
+                    </span> 
                   </button>
                   <div
                     className={`px-6 overflow-hidden bg-gray-50 text-gray-700 transition-max-height duration-500 ease-in-out ${

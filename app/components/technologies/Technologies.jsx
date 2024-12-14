@@ -52,8 +52,8 @@ const TechnologiesSection = () => {
   ];
 
   return (
-    <section className="py-10 overflow-hidden">
-      <div className="main-container mx-auto  relative">
+    <section className="py-10 overflow-hidden ">
+      <div className="main-container mx-auto relative">
 
         <div className="line ">
           <Image
@@ -78,8 +78,8 @@ const TechnologiesSection = () => {
         <div className='flex justify-between z-10 items-center'>
           <div className='w-1/2'>
             <p className='text-secondaryColor text-3xl font-[600] my-5'> Our Tools </p>
-            <h1 className='text-5xl  font-semibold font-merriweather'>What <span className='text-secondaryColor font-playfair italic'> Technologies </span> We Use?</h1>
-            <p className='text-lg  my-4 font-roboto '>
+            <h1 className='text-5xl  font-semibold font-merriweather text-black'>What <span className='text-secondaryColor font-playfair italic'> Technologies </span> We Use?</h1>
+            <p className='text-lg  my-4 font-roboto text-black'>
               At softiam, We use the best and most reliable technologies to deliver top-notch solutions for our customers.
             </p>
           </div>

@@ -110,10 +110,10 @@
 import React from "react";
 import "../../globals.css";
 import Image from "next/image";
-import WebImg from "../../assets/images/developmen.png";
-import AiImg from "../../assets/images/Ai.png";
-import AppImg from "../../assets/images/app.png";
-import SerImg from "../../assets/images/services.png"
+import WebImg from "../../assets/images/developmen (1).webp";
+import AiImg from "../../assets/images/Ai (1).webp";
+import AppImg from "../../assets/images/app (1).Webp";
+import SerImg from "../../assets/images/services.webp"
 
 const Services = () => {
   return (
@@ -147,7 +147,7 @@ const Services = () => {
           <p
             data-aos="fade-up"
             data-aos-delay="600"
-            className="text-md   opacity-100 font-roboto font-[500] z-30 w-100"
+            className="text-md text-black  opacity-100 font-roboto font-[500] z-30 w-100"
           >
             The Softiam -- provides you integrated design and content solutions.
             We specialize in creating stunning, user-friendly websites that

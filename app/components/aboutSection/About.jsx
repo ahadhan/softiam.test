@@ -123,7 +123,7 @@ import React, { useEffect } from 'react';
 import '../../globals.css';
 import Image from 'next/image';
 import AboutBg from "../../assets/images/about_image.png";
-import CurvedLine from "../../assets/images/curve line 3d.png";
+import CurvedLine from "../../assets/images/curved line.svg";
 import RocketImg from "../../assets/images/rocket.png";
 import VisionImg from "../../assets/images/vision.png";
 import 'aos/dist/aos.css'; // AOS CSS
@@ -166,7 +166,7 @@ const About = () => {
           Featured Case Study
         </p>
         <h1 
-          className="text-3xl md:text-5xl font-semibold font-playfair text-center md:text-left"
+          className="text-3xl md:text-5xl font-semibold font-playfair text-center md:text-left text-black"
           data-aos="fade-up" // AOS animation for the main heading
           data-aos-delay="200" // Delay for a staggered effect
         >
@@ -177,7 +177,7 @@ const About = () => {
           With Cutting-Edge Software Solutions
         </h1>
         <p 
-          className="text-lg my-4 font-roboto text-center md:text-left"
+          className="text-lg my-4 font-roboto text-center md:text-left text-black"
           data-aos="fade-up" // AOS animation for the description
           data-aos-delay="400"
         >

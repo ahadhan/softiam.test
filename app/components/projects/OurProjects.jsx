@@ -38,7 +38,7 @@ const PortfolioSection = () => {
             Gallery Here
           </p>
           <h1 
-            className='text-5xl font-semibold'
+            className='text-5xl font-semibold text-black'
             data-aos="fade-up" 
             data-aos-delay="400"
           >
@@ -46,7 +46,7 @@ const PortfolioSection = () => {
           </h1>
 
           <p 
-            className='text-lg my-4 font-roboto'
+            className='text-lg my-4 font-roboto text-black'
             data-aos="fade-up" 
             data-aos-delay="500"
           >

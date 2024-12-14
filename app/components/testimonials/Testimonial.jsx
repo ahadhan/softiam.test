@@ -203,7 +203,7 @@ const TestimonialsSection = () => {
           What Our Clients Say
         </p>
         <h1 
-          className="text-4xl sm:text-5xl font-semibold italic"
+          className="text-4xl sm:text-5xl font-semibold italic text-black"
           data-aos="fade-up" 
           data-aos-delay="500"
         >

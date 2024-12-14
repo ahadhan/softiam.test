@@ -221,7 +221,7 @@ const AboutUs = () => {
               Discover Us
             </p>
             <h1
-              className="text-4xl md:text-5xl font-semibold font-playfair"
+              className="text-4xl md:text-5xl font-semibold font-playfair text-black"
               data-aos="fade-up"
               data-aos-delay="400"
             >
@@ -236,7 +236,7 @@ const AboutUs = () => {
             </h1>
 
             <p
-              className="text-lg my-4 font-roboto"
+              className="text-lg my-4 font-roboto text-black"
               data-aos="fade-up"
               data-aos-delay="500"
             >
@@ -268,7 +268,7 @@ const AboutUs = () => {
 
           {/* Content Card */}
           <div
-            className="grid grid-cols-1 md:grid-cols-2 gap-8 bg-white w-full p-6 h-auto items-center"
+            className="grid grid-cols-1 md:grid-cols-2 gap-8 bg-white w-full p-6 h-auto items-center text-black"
             data-aos="fade-up"
             data-aos-delay="700"
           >
