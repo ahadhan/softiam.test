@@ -21,7 +21,7 @@ export default function Header() {
                 <div className="flex justify-between items-center h-16 px-4">
                     {/* Logo */}
                     <div className="flex items-center">
-                        <Image src={logo} alt="logo" width={250} height={250} />
+                        <Image src={logo} alt="logo" width={150} height={150} />
                     </div>
 
                     {/* Desktop Menu */}

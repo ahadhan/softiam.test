@@ -4,9 +4,9 @@
 import React from "react";
 import "../../globals.css";
 import Image from "next/image";
-import WebImg from "../../assets/images/developmen (1).webp";
-import AiImg from "../../assets/images/Ai (1).webp";
-import AppImg from "../../assets/images/app (1).webp";
+import WebImg from "../../assets/images/developmen.png";
+import AiImg from "../../assets/images/Ai.png";
+import AppImg from "../../assets/images/app.png";
 import SerImg from "../../assets/images/services.webp"
 
 const Services = () => {
